@@ -17,7 +17,6 @@ public class ReflectionActivity extends Activity {
     private TextView mTextViewMsg;
     private Button mBtnCalculateMarkNeeded;
 
-    double markNeeded;
     double testWorth;
     double currentMark;
     double desiredMark;
@@ -42,26 +41,35 @@ public class ReflectionActivity extends Activity {
                 testWorth= Double.parseDouble(mEditTextTestWorth.getText().toString())/100;
                 desiredMark= Double.parseDouble(mEditTextDesiredMark.getText().toString())/100;
 
-                markNeeded= (1*desiredMark-(1-testWorth)*currentMark)/testWorth*100;
+                markRequired();
 
-                mTextViewMarkNeeded.setText(((Double) markNeeded).toString() + "%");
+                mTextViewMarkNeeded.setText(((Double) markRequired()).toString() + "%");
 
 
-                if(markNeeded<80) {
-                    mTextViewMsg.setText("YOU'LL GET IT EASILY!");
-                }
-                if(markNeeded>80 && markNeeded<90){
-                    mTextViewMsg.setText("YOU GOT THIS!");
-                }
-                if(markNeeded>90 && markNeeded<100){
-                    mTextViewMsg.setText("YOU BETTER START OPENING UP YOUR BOOKS, GOOD LUCK!");
-                }
-                if(markNeeded>100){
-                    mTextViewMsg.setText("HARD LUCK, THIS IS IMPOSSIBLE, LET'S JUST HOPE YOUR TEST HAS BONUSES!");
-                }
-
+                reflection(markRequired());
             }
         });
 
+    }
+
+    public double markRequired(){
+        double markNeeded= (1*desiredMark-(1-testWorth)*currentMark)/testWorth*100;
+        return markNeeded;
+    }
+
+    public void reflection(double markNeeded){
+
+        if(markNeeded<80) {
+            mTextViewMsg.setText("YOU'LL GET IT EASILY!");
+        }
+        if(markNeeded>80 && markNeeded<90){
+            mTextViewMsg.setText("YOU GOT THIS!");
+        }
+        if(markNeeded>90 && markNeeded<100){
+            mTextViewMsg.setText("YOU BETTER START OPENING UP YOUR BOOKS, GOOD LUCK!");
+        }
+        if(markNeeded>100){
+            mTextViewMsg.setText("HARD LUCK, THIS IS IMPOSSIBLE, LET'S JUST HOPE YOUR TEST HAS BONUSES!");
+        }
     }
 }

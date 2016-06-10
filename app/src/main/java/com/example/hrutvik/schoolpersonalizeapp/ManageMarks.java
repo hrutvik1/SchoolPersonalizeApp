@@ -12,7 +12,6 @@ import android.widget.TextView;
 public class ManageMarks extends Activity {
 
 
-
     private Button mBtnCalculateWeightedAverage;
 
     private Button mBtnResetMarks;
@@ -58,37 +57,15 @@ public class ManageMarks extends Activity {
         mTextViewOverallAverage= (TextView) findViewById(R.id.textViewOverallAverage);
 
 
-        // Bundle extras = getIntent().getExtras();
-        // if (extras != null) {
-        // }
-
-        // mTextViewOverallAverage.setText(getIntent().getExtras().getString("tWeight"));
-        //  mTextViewOverallAverage.setText(getIntent().getExtras().getString("cWeight"));
-        //   mTextViewOverallAverage.setText(getIntent().getExtras().getString("aWeight"));
-
-
         mBtnCalculateWeightedAverage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
-            /*double e1,e2,e3,e4;
-            Intent receiveIntent = this.getIntent();
-            e1 = intent.getDoubleExtra("doubleValue_e1", defaultValue)
-            e2 = intent.getDoubleExtra("doubleValue_e2", defaultValue)
-            e3 = intent.getDoubleExtra("doubleValue_e3", defaultValue)
-            e4 = intent.getDoubleExtra("doubleValue_e4", defaultValue)*/
 
 
                 double kWeight= getIntent().getDoubleExtra("kWeight",30);  //key name , defualt value
                 double cWeight= getIntent().getDoubleExtra("cWeight",20);
                 double tWeight= getIntent().getDoubleExtra("tWeight",20);
                 double aWeight= getIntent().getDoubleExtra("aWeight",30);
-
-                //  if(TextUtils.isEmpty(mEditTextA.getText().toString())){
-                //      mEditTextA.setError("fill in categories before continuing");
-                // }
-
 
                 kMark = Double.parseDouble((mEditTextK.getText().toString())) * kWeight*0.01;
                 cMark = Double.parseDouble((mEditTextC.getText().toString())) * cWeight*0.01;
@@ -102,14 +79,6 @@ public class ManageMarks extends Activity {
             }
 
         });
-
-
-
-
-        //if(mEditTextA.getText().toString().matches("") ){
-        //    Toast.makeText(this, "Enter marks before continuing", Toast.LENGTH_LONG).show();
-        //}
-
 
 
         mBtnResetMarks.setOnClickListener(new View.OnClickListener() {

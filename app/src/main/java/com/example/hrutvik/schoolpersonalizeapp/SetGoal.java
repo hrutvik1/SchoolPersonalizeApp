@@ -21,9 +21,9 @@ import java.util.Calendar;
 public class SetGoal extends Activity {
     Calendar calendar = Calendar.getInstance();
     int day, month, Year;
-    public Button saveButton, saveButton2, saveButton3, saveButton4, saveButton5;
-    public SharedPreferences savedText1, savedText2, savedText3, savedText4, savedText5;
-    public EditText editGoal, editGoal2, editGoal3, editGoal4, editGoal5;
+    public Button saveButton, saveButton2, saveButton3, saveButton4;
+    public SharedPreferences savedText1, savedText2, savedText3, savedText4;
+    public EditText editGoal, editGoal2, editGoal3, editGoal4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,19 +45,16 @@ public class SetGoal extends Activity {
         savedText2 = getSharedPreferences("notes2", MODE_PRIVATE);
         savedText3 = getSharedPreferences("notes3", MODE_PRIVATE);
         savedText4 = getSharedPreferences("notes4", MODE_PRIVATE);
-        savedText5 = getSharedPreferences("notes5", MODE_PRIVATE);
 
         editGoal.setText(savedText1.getString("tag1", ""));
         editGoal2.setText(savedText2.getString("tag2", ""));
         editGoal3.setText(savedText3.getString("tag3", ""));
         editGoal4.setText(savedText4.getString("tag4", ""));
-        editGoal5.setText(savedText5.getString("tag5", ""));
 
         saveButton.setOnClickListener(saveButtonListener1);
         saveButton2.setOnClickListener(saveButtonListener2);
         saveButton3.setOnClickListener(saveButtonListener3);
         saveButton4.setOnClickListener(saveButtonListener4);
-        saveButton5.setOnClickListener(saveButtonListener5);
 
         Button changeDate = (Button) findViewById(R.id.date);
         Button changeDate2 = (Button) findViewById(R.id.date2);
@@ -123,12 +120,8 @@ public class SetGoal extends Activity {
         preferencesEditor.commit();
     }
 
-    private void makeTag5(String tag5) {
-        String or = savedText5.getString(tag5, null);
-        SharedPreferences.Editor preferencesEditor = savedText5.edit();
-        preferencesEditor.putString("tag5", tag5);
-        preferencesEditor.commit();
-    }
+
+
 
     public View.OnClickListener saveButtonListener1 = new View.OnClickListener() {
 
@@ -178,18 +171,7 @@ public class SetGoal extends Activity {
             }
         }
     };
-    public View.OnClickListener saveButtonListener5 = new View.OnClickListener() {
 
-        @Override
-        public void onClick(View v) {
-            if (editGoal5.getText().length() > 0) {
-                makeTag5(editGoal5.getText().toString());
-
-                ((InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(editGoal5.getWindowToken(), 0);
-
-            }
-        }
-    };
 
     DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
         @Override
@@ -228,15 +210,7 @@ public class SetGoal extends Activity {
             Toast.makeText(SetGoal.this, "Reminder set at : " + dayOfMonth + "/" + month + "/" + Year, Toast.LENGTH_SHORT).show();
         }
     };
-    DatePickerDialog.OnDateSetListener date5 = new DatePickerDialog.OnDateSetListener() {
-        @Override
-        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-            day = dayOfMonth;
-            month = monthOfYear + 1;
-            Year = year;
-            Toast.makeText(SetGoal.this, "Reminder set at : " + dayOfMonth + "/" + month + "/" + Year, Toast.LENGTH_SHORT).show();
-        }
-    };
+
     TimePickerDialog.OnTimeSetListener onTimeSetListener1 = new TimePickerDialog.OnTimeSetListener() {
         @Override
         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
@@ -256,12 +230,6 @@ public class SetGoal extends Activity {
         }
     };
     TimePickerDialog.OnTimeSetListener onTimeSetListener4 = new TimePickerDialog.OnTimeSetListener() {
-        @Override
-        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-            Toast.makeText(SetGoal.this, "Time Reminder set at: " + hourOfDay + " : " + minute, Toast.LENGTH_SHORT).show();
-        }
-    };
-    TimePickerDialog.OnTimeSetListener onTimeSetListener5 = new TimePickerDialog.OnTimeSetListener() {
         @Override
         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
             Toast.makeText(SetGoal.this, "Time Reminder set at: " + hourOfDay + " : " + minute, Toast.LENGTH_SHORT).show();
