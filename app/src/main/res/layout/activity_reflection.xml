@@ -10,7 +10,8 @@
         android:text="Enter desired mark (%)"
         android:id="@+id/textView2"
         android:layout_alignBottom="@+id/editTextDesiredMark"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textView13" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -26,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Enter current mark (%)"
+        android:text="Enter your mark (%)"
         android:id="@+id/textView13"
         android:layout_below="@+id/textView2"
         android:layout_alignParentStart="true"
@@ -66,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="How much of your overall mark is your next test worth (%)"
+        android:text="How much of your final mark is the test worth (%)"
         android:id="@+id/textView15"
         android:layout_below="@+id/editTextCurrentMark"
         android:layout_alignParentStart="true"

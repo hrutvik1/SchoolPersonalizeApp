@@ -9,8 +9,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * This activity class is launched upon applying changes to the SettingActivity class or through the title screen.
+ * If the user chooses not to change anything and directly opens this activity through the title screen,
+ * default values for the category weights are used (knowledge-30, thinking-20, communication-20, application-30).
+ * This activity obtains marks per category from the user and computes a weighted average using
+ * the weights of each category
+ */
 public class ManageMarks extends Activity {
-
 
     private Button mBtnCalculateWeightedAverage;
 
@@ -26,14 +32,13 @@ public class ManageMarks extends Activity {
     double aMark;
     double tMark;
 
-    public double kWeight;
-    public double cWeight;
-    public double aWeight;
-    public double tWeight;
-
     private TextView mTextViewOverallAverage;
 
-
+    /**
+     * This is an auto generated method by android studio
+     * It is made as the app gets created
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,13 +46,10 @@ public class ManageMarks extends Activity {
         super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.marks_manage);
 
-
         //casting widgets
         mBtnCalculateWeightedAverage= (Button) findViewById(R.id.btnCalculateWeightedAverage);
 
-
         mBtnResetMarks= (Button) findViewById(R.id.btnResetMarks);
-
 
         mEditTextK= (EditText) findViewById(R.id.editTextK) ;
         mEditTextT= (EditText) findViewById(R.id.editTextT);
@@ -56,11 +58,14 @@ public class ManageMarks extends Activity {
 
         mTextViewOverallAverage= (TextView) findViewById(R.id.textViewOverallAverage);
 
-
         mBtnCalculateWeightedAverage.setOnClickListener(new View.OnClickListener() {
+            /**
+             * This method is done when the user clicks the calculate weight button
+             * This method parses the editTexts and applies the category weights to determine a weighted average
+             * @param view
+             */
             @Override
             public void onClick(View view) {
-
 
                 double kWeight= getIntent().getDoubleExtra("kWeight",30);  //key name , defualt value
                 double cWeight= getIntent().getDoubleExtra("cWeight",20);
@@ -75,13 +80,15 @@ public class ManageMarks extends Activity {
                 totalMarks = kMark + cMark + aMark + tMark;
 
                 mTextViewOverallAverage.setText(String.valueOf(totalMarks));
-
             }
-
         });
 
-
         mBtnResetMarks.setOnClickListener(new View.OnClickListener() {
+            /**
+             * This method is done when the user clicks the reset marks button
+             * This method resets the marks on the editText
+             * @param view
+             */
             @Override
             public void onClick(View view) {
                 mEditTextK.setText("");
@@ -90,7 +97,5 @@ public class ManageMarks extends Activity {
                 mEditTextT.setText("");
             }
         });
-
-
     }
 }

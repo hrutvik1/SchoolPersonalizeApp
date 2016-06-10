@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">SchoolManager</string>
     <string name="start">Weighted Average Calculator</string>
-    <string name="set_goals">Set Goals with Reminders</string>
+    <string name="set_goals">Set Goals</string>
     <string name="settings">Change Weight of Categories For Weighted Average Calculator</string>
     <string name="mark_reflection">Mark Reflection</string>
-
 </resources>
