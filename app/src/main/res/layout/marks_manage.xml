@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/whiteboard">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextC"
+        android:layout_below="@+id/editTextK"
+        android:layout_alignStart="@+id/editTextK"
+        android:layout_marginTop="34dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextK"
+        android:layout_marginTop="58dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignEnd="@+id/btnResetMarks" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Weighted Average"
+        android:id="@+id/btnCalculateWeightedAverage"
+        android:textColor="#ffffff"
+        android:background="#010101"
+        android:textSize="15dp"
+        android:layout_alignTop="@+id/btnResetMarks"
+        android:layout_toEndOf="@+id/textView2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Marks"
+        android:id="@+id/btnResetMarks"
+        android:textColor="#ffffff"
+        android:background="#040404"
+        android:textSize="15dp"
+        android:layout_marginBottom="32dp"
+        android:layout_above="@+id/textViewOverallAverage"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Weighted Average:"
+        android:id="@+id/textViewOverallAverage"
+        android:textColor="#010101"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Knowledge"
+        android:id="@+id/textView"
+        android:layout_alignBottom="@+id/editTextK"
+        android:layout_toEndOf="@+id/textView2"
+        android:textColor="#000000"
+        android:textSize="18dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextT"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/editTextC" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextA"
+        android:layout_below="@+id/editTextT"
+        android:layout_alignStart="@+id/editTextT"
+        android:layout_marginTop="36dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Comm."
+        android:id="@+id/textView3"
+        android:layout_alignBottom="@+id/editTextC"
+        android:layout_alignStart="@+id/textView"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Thinking"
+        android:id="@+id/textView4"
+        android:layout_alignBottom="@+id/editTextT"
+        android:layout_alignStart="@+id/textView3"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Application"
+        android:id="@+id/textView5"
+        android:layout_alignBottom="@+id/editTextA"
+        android:layout_alignStart="@+id/textView4"
+        android:textColor="#000000"
+        android:textSize="18dp" />
+
+</RelativeLayout>

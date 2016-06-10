@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#1796b3">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Enter desired mark (%)"
+        android:id="@+id/textView2"
+        android:layout_alignBottom="@+id/editTextDesiredMark"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editTextDesiredMark"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="75dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Enter current mark (%)"
+        android:id="@+id/textView13"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editTextCurrentMark"
+        android:layout_alignBottom="@+id/textView13"
+        android:layout_alignStart="@+id/editTextDesiredMark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="REFLECTION"
+        android:id="@+id/textView14"
+        android:layout_marginTop="61dp"
+        android:textColor="#a00e0e"
+        android:layout_below="@+id/btnCalculateMarkNeeded"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="In your next test you need: "
+        android:id="@+id/textView16"
+        android:textColor="#000000"
+        android:layout_alignTop="@+id/textViewMarkNeeded"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="How much of your overall mark is your next test worth (%)"
+        android:id="@+id/textView15"
+        android:layout_below="@+id/editTextCurrentMark"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="46dp"
+        android:layout_toStartOf="@+id/editTextCurrentMark" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editTextTestWorth"
+        android:layout_alignBottom="@+id/textView15"
+        android:layout_toEndOf="@+id/textView15" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textViewMarkNeeded"
+        android:textColor="#000000"
+        android:layout_below="@+id/textView14"
+        android:layout_toEndOf="@+id/textView14"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Calculate"
+        android:id="@+id/btnCalculateMarkNeeded"
+        android:background="#dbb02d"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/editTextTestWorth"
+        android:layout_alignStart="@+id/textView14"
+        android:layout_toStartOf="@+id/textViewMarkNeeded" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Calculate what you need on your next test to obtain a desired mark"
+        android:id="@+id/textView17"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textViewMsg"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.hrutvik.schoolmanager.TitleActivity"
+    android:background="#ffffff">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:contentDescription="applogo"
+        android:src="@drawable/applogo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/btnManageMarksAct" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:id="@+id/btnManageMarksAct"
+        android:background="#0db216"
+        android:textColor="#05137e"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/imageView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSetGoalAct"
+        android:background="#0db216"
+        android:textColor="#05137e"
+        android:text="@string/set_goals"
+        android:layout_below="@+id/btnManageMarksAct"
+        android:layout_alignStart="@+id/btnManageMarksAct"
+        android:layout_marginTop="23dp"
+        android:layout_alignEnd="@+id/btnManageMarksAct" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSettingsAct"
+        android:layout_marginTop="23dp"
+        android:background="#0db216"
+        android:textColor="#05137e"
+        android:text="@string/settings"
+        android:layout_below="@+id/btnSetGoalAct"
+        android:layout_alignStart="@+id/btnSetGoalAct"
+        android:layout_alignEnd="@+id/btnSetGoalAct" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnReflectionAct"
+        android:textColor="#05137e"
+        android:background="#0db216"
+        android:text="@string/mark_reflection"
+        android:layout_below="@+id/btnSettingsAct"
+        android:layout_marginTop="30dp"
+        android:layout_alignEnd="@+id/btnSettingsAct"
+        android:layout_alignStart="@+id/btnSettingsAct" />
+
+</RelativeLayout>
