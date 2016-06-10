@@ -7,14 +7,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.hrutvik.schoolmanager.SetGoal"
+    tools:context="com.example.hrutvik.schoolpersonalizeapp.SetGoal"
     android:background="@drawable/sticky">
 
     <Button
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Set Reminder"
+        android:text="@string/set_reminder"
         android:layout_below="@+id/setGoal"
         android:layout_toStartOf="@+id/saveButton"
         android:textSize="18dp" />
@@ -23,7 +23,7 @@
         android:id="@+id/addGoal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add a Goal"
+        android:text="@string/add_a_goal"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#060606"
         android:layout_alignParentTop="true"
@@ -43,7 +43,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="@string/save"
         android:id="@+id/saveButton"
         android:layout_above="@+id/setGoal2"
         android:layout_alignParentEnd="true"
@@ -62,7 +62,7 @@
         android:id="@+id/date2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Set Reminder"
+        android:text="@string/set_reminder2"
         android:layout_below="@+id/setGoal2"
         android:layout_toStartOf="@+id/saveButton2"
         android:textSize="18dp" />
@@ -70,7 +70,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="@string/save2"
         android:id="@+id/saveButton2"
         android:layout_alignBottom="@+id/date2"
         android:layout_alignEnd="@+id/saveButton"
@@ -88,7 +88,7 @@
         android:id="@+id/date3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Set Reminder"
+        android:text="@string/set_reminder3"
         android:layout_below="@+id/setGoal3"
         android:layout_toStartOf="@+id/saveButton2"
         android:textSize="18dp" />
@@ -96,7 +96,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="@string/save3"
         android:id="@+id/saveButton3"
         android:layout_alignBottom="@+id/date3"
         android:layout_alignParentEnd="true"
@@ -115,7 +115,7 @@
         android:id="@+id/date4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Set Reminder"
+        android:text="@string/set_reminder4"
         android:layout_below="@+id/setGoal4"
         android:layout_alignStart="@+id/date3"
         android:textSize="18dp" />
@@ -123,7 +123,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="@string/save4"
         android:id="@+id/saveButton4"
         android:layout_alignTop="@+id/date4"
         android:layout_alignParentEnd="true"

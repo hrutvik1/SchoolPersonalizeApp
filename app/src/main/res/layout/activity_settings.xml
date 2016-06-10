@@ -7,7 +7,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Change The Weight of Each Category (in percent)"
+        android:text="@string/change_the_weight_of_each_category_in_percent"
         android:id="@+id/textViewOverallAverage"
         android:foregroundTint="#000000"
         android:textColorHighlight="#000000"
@@ -23,7 +23,7 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/editTextKWeight"
-        android:text="30"
+        android:text="@string/_30"
         android:layout_alignBottom="@+id/textView7"
         android:layout_alignParentEnd="true" />
 
@@ -33,7 +33,7 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/editTextTWeight"
-        android:text="20"
+        android:text="@string/_20"
         android:layout_alignBottom="@+id/textView8"
         android:layout_alignParentEnd="true" />
 
@@ -43,7 +43,7 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/editTextCWeight"
-        android:text="20"
+        android:text="@string/_20communication"
         android:layout_centerVertical="true"
         android:layout_alignParentEnd="true" />
 
@@ -53,7 +53,7 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/editTextAWeight"
-        android:text="30"
+        android:text="@string/_30application"
         android:layout_marginTop="43dp"
         android:layout_below="@+id/editTextCWeight"
         android:layout_alignParentEnd="true"
@@ -63,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Knowledge"
+        android:text="@string/knowledge"
         android:id="@+id/textView7"
         android:layout_below="@+id/textViewOverallAverage"
         android:layout_alignParentStart="true"
@@ -74,7 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Thinking"
+        android:text="@string/thinking"
         android:id="@+id/textView8"
         android:layout_above="@+id/editTextCWeight"
         android:layout_alignParentStart="true"
@@ -85,7 +85,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Communication"
+        android:text="@string/communication"
         android:id="@+id/textView10"
         android:textSize="18dp"
         android:layout_alignBottom="@+id/editTextCWeight"
@@ -95,7 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Application"
+        android:text="@string/application"
         android:id="@+id/textView11"
         android:layout_alignBottom="@+id/editTextAWeight"
         android:layout_alignParentStart="true"
@@ -107,13 +107,14 @@
         android:id="@+id/btnChangeWeight"
         android:src="@drawable/checkmark"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/check_mark" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Apply Changes"
+        android:text="@string/apply_changes"
         android:id="@+id/textView12"
         android:layout_above="@+id/btnChangeWeight"
         android:layout_centerHorizontal="true" />
